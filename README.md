@@ -35,4 +35,5 @@ Once you finish your commit you can run ```make lint``` it will run a linter and
 
 There are github actions workflows there you have a linter, builder, and test runner 80% minimum that runs in github
 
+Happy Hacking :sunglasses:
 
