@@ -8,7 +8,7 @@ func errorResponse(err error, suffix string) gin.H {
 	return gin.H{suffix: err.Error()}
 }
 
-func EndWithStatus(c *gin.Context, status int, suffix string, body any) {
+func EndWithStatus(c *gin.Context, status int, suffix string, body interface{}) {
 	c.JSON(status, gin.H{suffix: body})
 }
 

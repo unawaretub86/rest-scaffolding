@@ -14,5 +14,7 @@ type (
 )
 
 func NewHandler(container *dependencies.Container) *Handler {
-	return &Handler{}
+	return &Handler{
+		UseCase: usecase.NewUse(container),
+	}
 }
