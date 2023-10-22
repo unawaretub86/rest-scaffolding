@@ -29,7 +29,7 @@ Add your test files, once you can run ```make test``` and then you can see your 
 
 ## Running Linter
 
-Once you finish your commit you can run ```make lint``` it will run a linter and you can be sure about your good code ₊˚ʚ ₊˚✧ ﾟ.
+Once you finish your commit you can run ```make lint``` it will run a linter and you can be sure about your good code :wink:
 
 ## .github folder
 
