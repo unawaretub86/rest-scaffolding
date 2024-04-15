@@ -5,8 +5,6 @@ import (
 	"github.com/unawaretub86/project-una-yip-inventory/internal/infrastructure/dependencies"
 )
 
-const suffixErr = "Error"
-
 type (
 	Handler struct {
 		UseCase usecase.UseCase
