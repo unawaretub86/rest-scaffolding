@@ -1,30 +1,35 @@
 package configuration
 
 import (
-	"log"
-
-	"github.com/spf13/viper"
+	"fmt"
+	"os"
 )
 
-// This config stores all configuration of the app
-type Configuration struct {
-	DB_URL string `mapstructure:"DB_URL"`
+type DatabaseConfig struct {
+	Username     string
+	Password     string
+	DBName       string
+	SSLMode      string
+	Host         string
+	DatabasePort string
+	TimeZone     string
 }
 
-// LoadConfig reads the configuration from the file env
-func LoadConfiguration(path string) (config Configuration, err error) {
-	viper.AddConfigPath(path)
-	viper.SetConfigName("app")
-	viper.SetConfigType("env")
-
-	viper.AutomaticEnv()
-
-	err = viper.ReadInConfig()
-	if err != nil {
-		log.Fatal("cannot load env file", err)
+func GetDatabaseConfig() string {
+	dbConfig := DatabaseConfig{
+		Username:     os.Getenv("DB_USER"),
+		Password:     os.Getenv("DB_PASSWORD"),
+		DBName:       os.Getenv("DB_NAME"),
+		Host:         os.Getenv("DB_HOST"),
+		DatabasePort: os.Getenv("DB_PORT"),
+		SSLMode:      os.Getenv("SSL_MODE"),
+		TimeZone:     os.Getenv("TIME_ZONE"),
 	}
 
-	err = viper.Unmarshal(&config)
-
-	return
+	return fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=5432",
+		dbConfig.Host,
+		dbConfig.Username,
+		dbConfig.Password,
+		dbConfig.DBName,
+	)
 }

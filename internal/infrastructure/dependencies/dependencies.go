@@ -1,8 +1,9 @@
 package dependencies
 
 import (
-	"github.com/unawaretub86/rest-scaffolding/internal/infrastructure/configuration"
-	"github.com/unawaretub86/rest-scaffolding/internal/infrastructure/configuration/database"
+	"github.com/unawaretub86/project-una-yip-inventory/internal/infrastructure/configuration"
+
+	"github.com/unawaretub86/project-una-yip-inventory/internal/infrastructure/configuration/database"
 )
 
 type Container struct {
@@ -10,9 +11,9 @@ type Container struct {
 }
 
 func StartDependencies() *Container {
-	config, _ := configuration.LoadConfiguration(".")
+	dbUrl := configuration.GetDatabaseConfig()
 
-	db, err := database.ConnectDB(config.DB_URL)
+	db, err := database.ConnectDB(dbUrl)
 	if err != nil {
 		panic(err.Error())
 	}

@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"github.com/unawaretub86/rest-scaffolding/internal/domain/domain/repository/database"
-	"github.com/unawaretub86/rest-scaffolding/internal/infrastructure/dependencies"
+	database "github.com/unawaretub86/project-una-yip-inventory/internal/domain/inventory/repository/databse"
+	"github.com/unawaretub86/project-una-yip-inventory/internal/infrastructure/dependencies"
 )
 
 type (
