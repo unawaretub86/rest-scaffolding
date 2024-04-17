@@ -23,6 +23,14 @@ just run ``` make start ```
 
 your server will start
 
+## run the follow endpoint 
+
+```json
+/ping
+```
+
+Happy Hacking :sunglasses:
+
 ## Running the coverage tests
 
 Add your test files, once you can run ```make test``` and then you can see your coverage
@@ -35,5 +43,4 @@ Once you finish your commit you can run ```make lint``` it will run a linter and
 
 There are github actions workflows there you have a linter, builder, and test runner 80% minimum that runs in github
 
-Happy Hacking :sunglasses:
 
