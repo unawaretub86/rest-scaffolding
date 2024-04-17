@@ -1,8 +1,8 @@
 package http
 
 import (
-	"github.com/unawaretub86/project-una-yip-inventory/internal/domain/inventory/usecase"
-	"github.com/unawaretub86/project-una-yip-inventory/internal/infrastructure/dependencies"
+	"github.com/unawaretub86/restScaffolding/internal/domain/yourDomain/usecase"
+	"github.com/unawaretub86/restScaffolding/internal/infrastructure/dependencies"
 )
 
 type (

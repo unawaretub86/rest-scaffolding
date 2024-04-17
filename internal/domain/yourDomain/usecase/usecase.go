@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"github.com/unawaretub86/project-una-yip-inventory/internal/domain/inventory/repository"
-	"github.com/unawaretub86/project-una-yip-inventory/internal/infrastructure/dependencies"
+	"github.com/unawaretub86/restScaffolding/internal/domain/yourDomain/repository"
+	"github.com/unawaretub86/restScaffolding/internal/infrastructure/dependencies"
 )
 
 type (

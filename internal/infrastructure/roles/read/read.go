@@ -3,7 +3,8 @@ package read
 import (
 	"github.com/gin-gonic/gin"
 
-	"github.com/unawaretub86/project-una-yip-inventory/internal/infrastructure/dependencies"
+	"github.com/unawaretub86/restScaffolding/internal/infrastructure/dependencies"
+	yourHandler "github.com/unawaretub86/restScaffolding/internal/domain/yourDomain/http"
 )
 
 type read struct {
@@ -17,4 +18,7 @@ func NewRead(container *dependencies.Container) *read {
 }
 
 func (read *read) RegisterRoutes(basePath string, r *gin.Engine) {
+	handler := yourHandler.NewHandler(read.container)
+
+	r.GET("/ping", handler.Ping)
 }

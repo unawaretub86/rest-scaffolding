@@ -1,4 +1,4 @@
-module github.com/unawaretub86/project-una-yip-inventory
+module github.com/unawaretub86/restScaffolding
 
 go 1.21.4
 

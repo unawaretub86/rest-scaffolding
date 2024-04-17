@@ -1,8 +1,8 @@
 package database
 
 import (
-	database "github.com/unawaretub86/project-una-yip-inventory/internal/infrastructure/configuration/database"
-	"github.com/unawaretub86/project-una-yip-inventory/internal/infrastructure/dependencies"
+	database "github.com/unawaretub86/restScaffolding/internal/infrastructure/configuration/database"
+	"github.com/unawaretub86/restScaffolding/internal/infrastructure/dependencies"
 )
 
 type (
