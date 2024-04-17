@@ -23,7 +23,7 @@ just run ``` make start ```
 
 your server will start
 
-## run the follow endpoint 
+## Run the follow endpoint 
 
 ```json
 /ping
