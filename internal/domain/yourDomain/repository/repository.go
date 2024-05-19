@@ -19,3 +19,9 @@ func NewRepository(container *dependencies.Container) Repo {
 		database: database.NewDatabase(container),
 	}
 }
+
+func NewMockRepository(database database.Database) Repo {
+	return &repository{
+		database: database,
+	}
+}
