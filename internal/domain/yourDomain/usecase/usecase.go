@@ -19,3 +19,9 @@ func NewUse(container *dependencies.Container) UseCase {
 		repo: repository.NewRepository(container),
 	}
 }
+
+func NewMockUse(repositoryUser repository.Repo) UseCase {
+	return &useCase{
+		repo: repositoryUser,
+	}
+}

@@ -2,7 +2,11 @@ module github.com/unawaretub86/restScaffolding
 
 go 1.21.4
 
-require gorm.io/driver/postgres v1.5.7
+require (
+	github.com/DATA-DOG/go-sqlmock v1.5.2
+	github.com/stretchr/testify v1.8.4
+	gorm.io/driver/postgres v1.5.7
+)
 
 require (
 	github.com/bytedance/sonic v1.9.1 // indirect
